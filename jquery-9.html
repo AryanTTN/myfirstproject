@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p style="color: blueviolet;">Select drinks from the list.</p>
+
+<select>
+  <option value="">Select items</option>
+  <option value="Virgin Mojito">Virgin Mojito
+  <option value="Blue Lagoon">Blue Lagoon
+  <option value="Watermelon Drama">Watermelon Drama
+  <option value="Fire on the beach">Fire on the beach
+</select>
+<div>So you want to have <span><div id="this"></div></span> </div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() { 
+         $('select').on('change', function() {
+         $("#this").append(this.value+" <br>")
+});
+});
+
+</script>
+</body>
+</html>

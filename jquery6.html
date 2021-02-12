@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+	<title></title>
+	<style type="text/css">
+		  div, p, button{
+        font-size:150%;
+			  text-align: center;
+		}
+  </style>
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+  	$(document).ready(function() {
+  		$("#btn").click(function() {
+        $("div").replaceWith($("<p>"+$("div").text()+"</p>"));
+  		});
+  	});
+  </script>
+ </head>
+<body style="background-color:cadetblue";>
+      <div>
+      <p>TTN </p>
+      <p> WELCOME ABOARD</p>
+      <p>Growth Opportunities. </p>
+      Hello NEWERS. How ARE You? 
+    </div><br>
+    <center><button id="btn">change all div elements with p elements
+    </button></center>
+</body>
+</html>

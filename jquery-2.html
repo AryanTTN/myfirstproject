@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Add class</title>
+    <style type="text/css">
+        .load {
+            background-color: aquamarine;
+            color: orangered;
+            border: 2px solid black;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#code").addClass('load');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="code">
+        <p>Hello</p>
+        <p>and</p>
+        <p>Goodbye</p>
+    </div>
+
+</body>
+
+</html>

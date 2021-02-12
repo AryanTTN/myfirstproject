@@ -1,0 +1,39 @@
+<html>
+<head>
+<title></title>
+<style>
+html,body{height:100%;width:100%}
+
+.list {
+    width : 100%;
+    height : 100%;
+    background : #4edbdd;
+}
+
+div ul li {
+    background : red;
+    list-style: disc; 
+    display: inline-block;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="list">
+       <ul>
+       <li> list inside div</li>
+       <li> list inside div</li>
+       <li> list inside div</li>
+       </ul>
+    </div>
+<script>
+$(document).ready(function()
+{
+$('.list').on('click', function () { alert('You clicked on the child list element.'); }).children().on('click', function (e) {
+    e.stopPropagation();
+
+});
+});
+</script>
+</body>
+</html>

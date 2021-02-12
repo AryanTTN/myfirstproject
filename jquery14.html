@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+table, th, td {
+    border: 2px solid black;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<table style="width:100%" id="someTable">
+   <center><strong>Quiz Score Earned</strong><center>
+  <tr>
+    <th class="name">First Name</th>
+    <th class="competency">Competency</th>
+    <th class="epoints">Points</th>
+  </tr>
+  <tr>
+    <td class="name">Amit</td>
+    <td class="competency">QE</td>
+    <td class="epoints">15</td>
+  </tr>
+  <tr>
+    <td class="name">Ritika</td>
+    <td class="competency">Android</td>
+    <td class="epoints">9</td>
+  </tr>
+   <tr>
+    <td class="name">Swastik</td>
+    <td class="competency">iOS</td>
+    <td class="epoints">19</td>
+  </tr>
+<tr>
+    <td class="name">Anam</td>
+    <td class="competency">MEAN</td>
+    <td class="epoints">8</td>
+  </tr>
+</table>
+<script>
+$(document).ready(function(){
+
+    $('.epoints').each(function(i, n) {
+   if($(n).text() > 10) 
+      $(n).css('color', 'blue').css('background-color','pink');
+});
+});
+</script>
+</body>
+</html>

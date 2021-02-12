@@ -1,0 +1,30 @@
+<!dOCTYPE html>
+<html>
+  <head>
+	   <title>Question5</title>
+	    <style type="text/css">
+		      .target{
+			         font-size: 150%;
+               text-align: center;
+		            }
+	    </style>
+   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+ 	  <script type="text/javascript">
+ 		     $(document).ready(function() {
+ 			       $("button").click(function() {
+ 				          $(".target").parent("#main").css('font-size', '300%');
+ 			            });
+                });
+ 	  </script>
+  </head>
+<body style="background-color:yellow";>
+        <div id="main">
+	         <p class="target"> Great Place to Work</p>
+         </div>
+         <div id="main1">
+	          <p class="target">To The New</p>
+        </div>
+    <center><button class="target">change the font of the element
+      whose parent has id "main"</button></center>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="div1" style="font-size: 25px"><b>Hello and Welcome to jQuery</b></div>
+        <button type="button" style="font-size: 20px">Click To Retrieve Data!</button>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+      <script>
+          $(document).ready(function()
+      {
+              console.log("hello");
+              $("button").click(function()
+             {
+
+                  $.ajax({
+ url:"https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1",async:'true',dataType:'json', type:'GET',
+                    success:function(result) {
+                      setTimeout(function(){
+                          console.log(result);
+                           $('#div1').append('</br>'+result);
+                           
+                      },1000);
+                  },error:function(){
+                  }});
+                  console.log("outside ajax");
+              });
+          });
+
+      </script>
+  </body>
+</html>

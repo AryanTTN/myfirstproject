@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <h1>Disabled submit button after clicked</h1>
+
+    <form id="newform" action="#" method="POST">
+        <input type="submit" id="buttonSubmit" value="Submit"></input>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js">
+        $(document).ready(function () {
+            $("#newform").submit(function (e) {
+                
+                e.preventDefault();
+                $("#buttonSubmit").attr("disabled",true);
+                return true;
+
+            });
+        });
+    </script>
+</body>
+</html>
